@@ -10,9 +10,10 @@ class user_empleado(models.Model):
 
 class user_empresa(models.Model):
     nombre = models.CharField(max_length = 30)
-    edad = models.IntegerField()
+    descripcion = models.TextField(blank=True, null=True)
+    contacto = models.CharField(max_length = 50, blank=True, null=True) 
 
 class empleo(models.Model):
     empleo = models.CharField(max_length = 150)
-    empresa = models.CharField(max_length = 50)
     sueldo = models.IntegerField()
+    empresa = models.CharField(max_length = 30)
